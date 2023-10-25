@@ -1,0 +1,647 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+   --main-color:blue; 
+   --main-color1:red; 
+   --black: #13131a;
+   --bg: #010103;
+   /*--border:.1rem solid rgba(255,255,255,.3);*/
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box; 
+    outline: none; border:none; 
+    text-decoration: none;
+    text-transform: capitalize; 
+    transition: .2s linear;
+}
+
+html{
+    font-size:62.5%;
+    overflow-x:hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior:smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background:transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background:#fff;
+    border-radius:5rem;
+}
+body{
+    background:var(--bg);
+}
+
+
+.header {
+    background: var(--bg); 
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Styles for the main navbar (.navbar) */
+.header .navbar {
+     /* Background color for the main navbar */
+    color: #fff; /* Text color for the links in the main navbar */
+    padding: 10px; /* Padding for the main navbar */
+}
+
+.header .navbar a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #fff; /* Text color for the links in the main navbar */
+    margin: 0 10px; /* Add spacing between links in the main navbar */
+    font-size: 1.6rem;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color); /* Hover color for links in the main navbar */
+    border-bottom: .1rem solid var(--main-color); /* Add a bottom border on hover */
+    padding-bottom: .1rem;
+}
+
+/* Styles for the second navbar (.navbar1) below the main navbar */
+.header .navbar1 {
+    /* Background color for the second navbar */
+    color: #fff; /* Text color for the links in the second navbar */
+    padding: 10px;
+    margin-left:10px; /* Padding for the second navbar */
+}
+
+.header .navbar1 a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #fff; /* Text color for the links in the second navbar */
+    margin: 0 15px; /* Add spacing between links in the second navbar */
+    font-size: 1.6rem;
+}
+
+.header .navbar1 a:hover {
+    color: var(--main-color1); /* Hover color for links in the second navbar */
+    border-bottom: .1rem solid var(--main-color); /* Add a bottom border on hover */
+    padding-bottom: .1rem;
+}
+
+
+/* Styles for the dropdown menu */
+.header .navbar1 .menu-bar {
+    position: relative;
+    display: inline-block;
+}
+
+.header .navbar1 .menu-bar .dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position the dropdown below the menu-bar */
+    left: 0;
+    background-color: black;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px; /* Set a minimum width for the dropdown menu */
+}
+
+.header .navbar1 .menu-bar:hover .dropdown_menu {
+    display: block; /* Show the dropdown menu when menu-bar is hovered */
+}
+
+.header .navbar1 .menu-bar ul {
+    list-style-type: none;
+    display: block;
+    padding: 0;
+}
+
+.header .navbar1 .menu-bar li {
+    display:block;
+    padding: 10px;
+}
+
+.header .navbar1 .menu-bar a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.header .navbar1 .menu-bar a:hover {
+    color: var(--main-color1);
+}
+
+
+/* Horizontal navigation styles for .navbar1 */
+.header .navbar1.horizontal {
+    display: flex;
+    align-items: center;
+}
+
+.header .navbar1.horizontal a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header .navbar1.horizontal a:last-child {
+    margin-right: 0;
+}
+
+.header .navbar1.horizontal .menu-bar {
+    display: none; /* Hide the dropdown for horizontal navigation */
+}
+
+/* Add a media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .header .navbar1.horizontal {
+        display: none; /* Hide horizontal navigation on smaller screens */
+    }
+
+    .header .navbar1 .menu-bar {
+        display: block; /* Display dropdown menu on smaller screens */
+    }
+
+    .header .navbar1 .menu-bar ul {
+        text-align: center;
+    }
+
+    .header .navbar1 .menu-bar li {
+        display: block;
+    }
+
+    html{
+        font-size:55%;
+    }
+    .header{
+        padding:1.5rem 2rem;
+    }
+    section{
+        padding:2rem;
+    }
+}
+
+
+
+
+
+.header .logo img{
+  height: 6rem;
+  margin-left: -5rem;
+}
+
+
+
+
+
+.header .icon div {
+    color: white;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem; /* Add margin-right to create a gap between icons */
+}
+  
+
+.header .icon div:hover{
+   color:var(--main-color);
+}
+
+/*home-code starts*/
+.home{
+    min-height:70vh;
+    display:flex;
+    align-items:center;
+    background:url("/static/images/home-img.jpg") no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.home .content{
+    max-width: 60rem;
+}
+.home .content h1{
+    font-size:5rem;
+    color:#fff;
+}
+.home .content p{
+    font-size:2rem;
+    font-weight:lighter;
+    line-height:1.5;
+    padding:2rem 0;
+    color:whitesmoke;
+}
+
+.heading{
+    text-align:center;
+    color:#fff;
+    text-transform:uppercase;
+    padding-bottom: 4rem;
+    font-size:4rem;
+}
+
+.heading span{
+    color:red;
+    text-transform:uppercase;
+}
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding:.9rem 3rem;
+  font-size: 1.7rem; color:black;
+  background: #fff; 
+  cursor: pointer;
+}
+
+.btn:hover{
+   letter-spacing: .2rem;
+}
+
+section{
+    padding:2rem 7%;
+}
+.About .row{
+    display:flex;
+    align-items:center;
+   
+    flex-wrap:wrap;
+}
+.About .row .image{
+    flex:1 1 45rem;
+    padding:2rem;
+    
+}
+
+.About .row .image img{
+    width:100%;
+    max-height:400px;
+}
+.About .row .content{
+    flex:1 1 45rem;
+    padding:2rem;
+}
+
+.About .row .content p{
+    font-size: 1.6rem;
+    color:#fff;
+    padding:1rem 0;
+    line-height:1.8;
+   
+
+}
+
+.services .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(40rem,1fr));
+    gap:1 2 rem;
+}
+
+.services .box-container .box{
+    padding:5rem;
+    text-align:center;
+    border:var(--border);
+}
+.services .box-container .box img{
+    height:25rem;
+    margin-left:-20px;
+    margin-bottom: -2px;
+    margin-top: -30px;
+
+
+}
+.services .box-container .box h3{
+    color:#fff;
+    font-size:2rem;
+    padding:-50rem 0;
+    
+}
+
+.services .box-container .box:hover{
+    background:#fff;
+}
+
+.services .box-container .box:hover>*{
+    color:black;
+}
+.services .box-container .box:hover .btn {
+    background: black; /* Change the background color to black on hover */
+    color: white; /* Change the text color to white on hover */
+}
+
+
+/*droutght-code starts*/
+.drought{
+    min-height:70vh;
+    display:flex;
+    align-items:center;
+    background:url("/static/images/droughtp.jpg") no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.drought .content{
+    max-width: 60rem;
+}
+.drought .content h1{
+    font-size:5rem;
+    color:#fff;
+    margin-top: 70px;
+}
+.drought .content p{
+    font-size:2rem;
+    font-weight:300;
+    line-height:1.5;
+    padding:2rem 0;
+    color:whitesmoke;
+}
+
+.drought1 .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(40rem,1fr));
+    gap:1 2 rem;
+}
+
+.drought1 .box-container .box{
+    padding:5rem;
+    text-align:center;
+    border:var(--border);
+}
+.drought1 .box-container .box img{
+    height:25rem;
+    margin-left:-20px;
+    margin-bottom: -2px;
+    margin-top: -30px;
+
+
+}
+.drought1 .box-container .box h3{
+    color:#fff;
+    font-size:2rem;
+    padding:-50rem 0;
+    
+}
+
+.drought1 .box-container .box:hover{
+    background:#fff;
+}
+
+.drought1 .box-container .box:hover>*{
+    color:black;
+}
+.drought1 .box-container .box:hover .btn {
+    background: black; /* Change the background color to black on hover */
+    color: white; /* Change the text color to white on hover */
+}
+
+/*flood-code starts*/
+.flood{
+    min-height:70vh;
+    display:flex;
+    align-items:center;
+    background:url("/static/images/floodbg.jpg") no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.flood .content{
+    max-width: 60rem;
+}
+.flood .content h1{
+    font-size:5rem;
+    color:#fff;
+    margin-top: 70px;
+}
+.flood .content p{
+    font-size:2rem;
+    font-weight:300;
+    line-height:1.5;
+    padding:2rem 0;
+    color:whitesmoke;
+}
+
+.flood1 .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(40rem,1fr));
+    gap:1 2 rem;
+}
+
+.flood1 .box-container .box{
+    padding:5rem;
+    text-align:center;
+    border:var(--border);
+}
+.flood1 .box-container .box img{
+    height:25rem;
+    margin-left:-50px;
+    margin-bottom: -2px;
+    margin-top: -30px;
+
+
+}
+.flood1 .box-container .box h3{
+    color:#fff;
+    font-size:2rem;
+    padding:-50rem 0;
+    
+}
+
+.flood1 .box-container .box:hover{
+    background:#fff;
+}
+
+.flood1 .box-container .box:hover>*{
+    color:black;
+}
+.flood1 .box-container .box:hover .btn {
+    background: black; /* Change the background color to black on hover */
+    color: white; /* Change the text color to white on hover */
+}
+
+/* Cyclone code starts here*/
+.cyclone{
+    min-height:70vh;
+    display:flex;
+    align-items:center;
+    background:url("/static/images/cyclonebg.jpg") no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.cyclone .content{
+    max-width: 60rem;
+}
+.cyclone .content h1{
+    font-size:5rem;
+    color:#fff;
+    margin-top: 70px;
+}
+.cyclone .content p{
+    font-size:2rem;
+    font-weight:300;
+    line-height:1.5;
+    padding:2rem 0;
+    color:whitesmoke;
+}
+
+.cyclone1 .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(40rem,1fr));
+    gap:1 2 rem;
+}
+
+.cyclone1 .box-container .box{
+    padding:5rem;
+    text-align:center;
+    border:var(--border);
+}
+.cyclone1 .box-container .box img{
+    height:25rem;
+    margin-left:-50px;
+    margin-bottom: -2px;
+    margin-top: -30px;
+
+
+}
+.cyclone1 .box-container .box h3{
+    color:#fff;
+    font-size:2rem;
+    padding:-50rem 0;
+    
+}
+
+.cyclone1 .box-container .box:hover{
+    background:#fff;
+}
+
+.cyclone1 .box-container .box:hover>*{
+    color:black;
+}
+.cyclone1 .box-container .box:hover .btn {
+    background: black; /* Change the background color to black on hover */
+    color: white; /* Change the text color to white on hover */
+}
+
+
+/* FloodAssessmnet Starts here */
+.FloodAssessment{
+    min-height:70vh;
+    display:flex;
+    align-items:center;
+    background:url("/static/images/home-img.jpg") no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.FloodAssessment .content{
+    max-width: 60rem;
+}
+.FloodAssessment .content h1{
+    font-size:5rem;
+    color:#fff;
+}
+.FloodAssessment .content p{
+    font-size:2rem;
+    font-weight:lighter;
+    line-height:1.5;
+    padding:2rem 0;
+    color:whitesmoke;
+}
+
+.heading{
+    text-align:center;
+    color:#fff;
+    text-transform:uppercase;
+    padding-bottom: 4rem;
+    font-size:4rem;
+}
+
+.heading span{
+    color:red;
+    text-transform:uppercase;
+}
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding:.9rem 3rem;
+  font-size: 1.7rem; color:black;
+  background: #fff; 
+  cursor: pointer;
+}
+
+.btn:hover{
+   letter-spacing: .2rem;
+}
+
+section{
+    padding:2rem 7%;
+}
+.About .row{
+    display:flex;
+    align-items:center;
+   
+    flex-wrap:wrap;
+}
+.About .row .image{
+    flex:1 1 45rem;
+    padding:2rem;
+    
+}
+
+.About .row .image img{
+    width:100%;
+    max-height:400px;
+}
+.About .row .content{
+    flex:1 1 45rem;
+    padding:2rem;
+}
+
+.About .row .content p{
+    font-size: 1.6rem;
+    color:#fff;
+    padding:1rem 0;
+    line-height:1.8;
+   
+
+}
+
+.services .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(40rem,1fr));
+    gap:1 2 rem;
+}
+
+.services .box-container .box{
+    padding:5rem;
+    text-align:center;
+    border:var(--border);
+}
+.services .box-container .box img{
+    height:25rem;
+    margin-left:-20px;
+    margin-bottom: -2px;
+    margin-top: -30px;
+
+
+}
+.services .box-container .box h3{
+    color:#fff;
+    font-size:2rem;
+    padding:-50rem 0;
+    
+}
+
+.services .box-container .box:hover{
+    background:#fff;
+}
+
+.services .box-container .box:hover>*{
+    color:black;
+}
+.services .box-container .box:hover .btn {
+    background: black; /* Change the background color to black on hover */
+    color: white; /* Change the text color to white on hover */
+}
+
+/*home-code starts*/

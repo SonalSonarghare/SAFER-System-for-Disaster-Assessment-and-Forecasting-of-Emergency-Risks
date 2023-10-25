@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Windy Map Forecast</title>
+</head>
+<body>
+    <div id="windy-map"></div>
+    <script>
+        var windytyInit = {
+            key: 'qEGKjsz7ZvXcp7Fy3L0y9wwlNzZaHx57',
+            lat: 20.303,
+            lon: 90.483,
+            zoom: 5,
+        };
+        windyInit = windytyInit;
+        var script = document.createElement('script');
+        script.src = 'https://api.windy.com/assets/map-forecast/libBoot.js';
+        script.async = true;
+        document.getElementsByTagName('head')[0].appendChild(script);
+    </script>
+</body>
+</html>

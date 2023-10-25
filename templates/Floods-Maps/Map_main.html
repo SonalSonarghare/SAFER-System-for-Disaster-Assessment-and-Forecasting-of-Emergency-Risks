@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_be6f4a3f5ba3f9448847775b644dc356 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_be6f4a3f5ba3f9448847775b644dc356" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_be6f4a3f5ba3f9448847775b644dc356 = L.map(
+              "map_be6f4a3f5ba3f9448847775b644dc356",
+                {
+                   center: [20.5937, 78.9629],  // Centered over India
+                   crs: L.CRS.EPSG3857,
+                   zoom: 7, // You can adjust the zoom level as needed
+                   zoomControl: true,
+                   preferCanvas: false,
+                }
+            );
+            
+
+        
+    
+            var tile_layer_780ad4a4ca972ff49dae30a4bd228bdb = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_be6f4a3f5ba3f9448847775b644dc356);
+        
+    
+            var marker_6032bb0ad6f98cef76133d0f16b30618 = L.marker(
+                [27.5706, 80.0982],
+                {}
+            ).addTo(map_be6f4a3f5ba3f9448847775b644dc356);
+        
+    
+            var icon_12ec068ce519dfdf361e1e18a3a982b6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fas fa-house-flood-water", "iconColor": "black", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_6032bb0ad6f98cef76133d0f16b30618.setIcon(icon_12ec068ce519dfdf361e1e18a3a982b6);
+        
+    
+        var popup_f7193974d4513446c7feed6af01490a7 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_de98dfff131dfc513705dc6866dedf02 = $(`<div id="html_de98dfff131dfc513705dc6866dedf02" style="width: 100.0%; height: 100.0%;"> <div style='width: 500px; height: auto; padding: 9px; border: 2px solid #333; border-radius: 10px;'>     <h2 style='color: #1e73be; background-color: #333; color: white; padding: 18px; border-radius: 5px;font-size:27px;margin-top: -2px;'>         Uttar Pradesh: Floods Aug-Oct 2022     </h2>     <p style='font-size: 15px; text-align: justify;color: black;'>         Uttar Pradesh experienced severe floods during August-October 2022 due to unprecedented and intense rains. Major floods have occurred in the Ganga River Basin along the Rapti & Ghagra river reaches due to heavy rainfall and runoff. It has affected several districts in Uttar Pradesh, leaving scores of people homeless, causing hundreds of fatalities, and washing away homes.<br>According to a report by the relief commissioner's office, the lives of around 5.8 lakh people have been impacted due to the floods.     </p>   
+                      <p style='font-size: 20px; font-weight: bold; margin-top: 20px;color: black;'>Major Affected Area</p> <a href="/templates/Floods-Maps/Gorakhpur.html" class="btn" style="background-color: #1e73be; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 10px;">More Details</a> </div> </div>  </div>`)[0];
+                popup_f7193974d4513446c7feed6af01490a7.setContent(html_de98dfff131dfc513705dc6866dedf02);
+            
+        
+
+        marker_6032bb0ad6f98cef76133d0f16b30618.bindPopup(popup_f7193974d4513446c7feed6af01490a7)
+        ;
+
+        
+    
+    
+            marker_6032bb0ad6f98cef76133d0f16b30618.bindTooltip(
+                `<div>
+                     Click for Uttar Pradesh information
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9d605ed5b66e299705fdd59d6902680f = L.marker(
+                [32.1024, 77.5619],
+                {}
+            ).addTo(map_be6f4a3f5ba3f9448847775b644dc356);
+        
+    
+            var icon_2b23bb2fb3a4a32c635b57185c431b16 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fas fa-house-flood-water", "iconColor": "black", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_9d605ed5b66e299705fdd59d6902680f.setIcon(icon_2b23bb2fb3a4a32c635b57185c431b16);
+        
+    
+        var popup_cdbd32eea5dcdc38d83cc26e412be7ce = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_401c2b4f829809c5a65948d811e71bf9 = $(`<div id="html_401c2b4f829809c5a65948d811e71bf9" style="width: 100.0%; height: 100.0%;"> <div style='width: 500px; height: auto; padding: 9px; border: 2px solid #333; border-radius: 10px;'>     <h2 style='color: #1e73be; background-color: #333; color: white; padding: 18px; border-radius: 5px;font-size:24px;margin-top: -2px;'>         Himachal Pradesh: Floods Jul-Aug 2023     </h2>     <p style='font-size: 15px; text-align: justify;color: black;'>         The 2023 North India floods were one of the worst disasters in Himachal Pradesh in the past 100 years. The state was hit by excessive rainfall in July and two unprecedented spells in August. The state government estimates that 13,000 houses were destroyed. The state also lost 408 transformers and 149 water supply schemes. 506 roads are still closed.     </p>  
+                       <p style='font-size: 20px; font-weight: bold; margin-top: 20px;color: black;'>         Major Affected Areas     </p><a href="/templates/Floods-Maps/Gorakhpur.html" class="btn" style="background-color: #1e73be; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 10px;">More Details</a> </div> </div>  </div>`)[0];
+                popup_cdbd32eea5dcdc38d83cc26e412be7ce.setContent(html_401c2b4f829809c5a65948d811e71bf9);
+            
+        
+
+        marker_9d605ed5b66e299705fdd59d6902680f.bindPopup(popup_cdbd32eea5dcdc38d83cc26e412be7ce)
+        ;
+
+        
+    
+    
+            marker_9d605ed5b66e299705fdd59d6902680f.bindTooltip(
+                `<div>
+                     Click for Himachal Pradesh information
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_207622ebe65382185d980b0f5f9ce992 = L.marker(
+                [15.9129, 79.74],
+                {}
+            ).addTo(map_be6f4a3f5ba3f9448847775b644dc356);
+        
+    
+            var icon_a6bd03abd714ee020286a48da4b34122 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fas fa-house-flood-water", "iconColor": "black", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_207622ebe65382185d980b0f5f9ce992.setIcon(icon_a6bd03abd714ee020286a48da4b34122);
+        
+    
+        var popup_76ee7d0c4c0d4251837c89800cfae94e = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_4ea99082407c18678ec9f0187e2640b6 = $(`<div id="html_4ea99082407c18678ec9f0187e2640b6" style="width: 100.0%; height: 100.0%;"> <div style='width: 500px; height: auto; padding: 9px; border: 2px solid #333; border-radius: 10px;'>     <h2 style='color: #1e73be; background-color: #333; color: white; padding: 18px; border-radius: 5px;font-size:24px;margin-top: -2px;'>         Andhra Pradesh: Floods Aug 2023     </h2>     <p style='font-size: 15px; text-align: justify;color: black;'>         The 2023 Andhra Pradesh floods were one of the worst floods to hit the state in recent years. The floods were caused by heavy monsoon rains and the overflowing of rivers such as the Krishna, Godavari, and Penner. The floods affected over 1 million people and caused widespread damage to property and infrastructure.The floods also had a devastating impact on agriculture. Over 100,000 hectares of crops were destroyed, and thousands of farmers lost their livelihoods.     </p>     <p style='font-size: 20px; font-weight: bold; margin-top: 20px;color: black;'>         Major Affected Areas     </p> </div>  </div>`)[0];
+                popup_76ee7d0c4c0d4251837c89800cfae94e.setContent(html_4ea99082407c18678ec9f0187e2640b6);
+            
+        
+
+        marker_207622ebe65382185d980b0f5f9ce992.bindPopup(popup_76ee7d0c4c0d4251837c89800cfae94e)
+        ;
+
+        
+    
+    
+            marker_207622ebe65382185d980b0f5f9ce992.bindTooltip(
+                `<div>
+                     Click for Andhra Pradesh information
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_66610e5a341baedb46c29231081538df = L.marker(
+                [26.2006, 92.9376],
+                {}
+            ).addTo(map_be6f4a3f5ba3f9448847775b644dc356);
+        
+    
+            var icon_1fe03d589986cd7117093a431c98519d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fas fa-house-flood-water", "iconColor": "black", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_66610e5a341baedb46c29231081538df.setIcon(icon_1fe03d589986cd7117093a431c98519d);
+        
+    
+        var popup_e8f2c5020ca190e27ba8dbd4907a0906 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_abaac8aaeb3d3a964d53c44f63e1436a = $(`<div id="html_abaac8aaeb3d3a964d53c44f63e1436a" style="width: 100.0%; height: 100.0%;"> <div style='width: 500px; height: auto; padding: 9px; border: 2px solid #333; border-radius: 10px;'>     <h2 style='color: #1e73be; background-color: #333; color: white; padding: 18px; border-radius: 5px;font-size:24px;margin-top: -2px;'>         Assam: Floods June 2023     </h2>     <p style='font-size: 15px; text-align: justify;color: black;'>         The Assam floods of 2023 began on June 14, 2023.The floods were caused by heavy monsoon rains that led to the overflowing of the Brahmaputra river and its tributaries.The floods have affected over 1,00,000 people in 20 districts of the state. The major districts affected are Darrang, Dhubri, Goalpara, Majuli, Morigaon, and Udalguri.<br>The Assam government has launched a massive relief and rescue operation to help the flood victims. Over 400 relief camps have been set up to provide shelter and food to the evacuees.     </p>     <p style='font-size: 20px; font-weight: bold; margin-top: 20px;color: black;'>         Major Affected Areas     </p> </div>  </div>`)[0];
+                popup_e8f2c5020ca190e27ba8dbd4907a0906.setContent(html_abaac8aaeb3d3a964d53c44f63e1436a);
+            
+        
+
+        marker_66610e5a341baedb46c29231081538df.bindPopup(popup_e8f2c5020ca190e27ba8dbd4907a0906)
+        ;
+
+        
+    
+    
+            marker_66610e5a341baedb46c29231081538df.bindTooltip(
+                `<div>
+                     Click for Assam information
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d37ccdd684648a94974da8b0eeb3e40d = L.marker(
+                [25.9644, 85.2722],
+                {}
+            ).addTo(map_be6f4a3f5ba3f9448847775b644dc356);
+        
+    
+            var icon_135dbdbff4c3f89e38cb65057d24f7e4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fas fa-house-flood-water", "iconColor": "black", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_d37ccdd684648a94974da8b0eeb3e40d.setIcon(icon_135dbdbff4c3f89e38cb65057d24f7e4);
+        
+    
+        var popup_a7c1903d6ac4ed8a0999d3944510b50a = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_ea514a52952fffb099781c060d907d71 = $(`<div id="html_ea514a52952fffb099781c060d907d71" style="width: 100.0%; height: 100.0%;"> <div style='width: 500px; height: auto; padding: 9px; border: 2px solid #333; border-radius: 10px;'>     <h2 style='color: #1e73be; background-color: #333; color: white; padding: 18px; border-radius: 5px;font-size:24px;margin-top: -2px;'>         Bihar: Floods Jul-Aug 2020     </h2>     <p style='font-size: 15px; text-align: justify;color: black;'>         The 2020 Bihar floods were caused by heavy monsoon rains and the overflowing of rivers such as the Ganga, Kosi, and Mahananda.The floods affected over 74 lakh people in 16 districts of the state and caused widespread damage to property and infrastructure.The Bihar government launched a massive relief and rescue operation to help the flood victims. Over 400 relief camps were set up to provide shelter and food to the evacuees.     </p>     <p style='font-size: 20px; font-weight: bold; margin-top: 20px;color: black;'>         Major Affected Areas     </p> </div>  </div>`)[0];
+                popup_a7c1903d6ac4ed8a0999d3944510b50a.setContent(html_ea514a52952fffb099781c060d907d71);
+            
+        
+
+        marker_d37ccdd684648a94974da8b0eeb3e40d.bindPopup(popup_a7c1903d6ac4ed8a0999d3944510b50a)
+        ;
+
+        
+    
+    
+            marker_d37ccdd684648a94974da8b0eeb3e40d.bindTooltip(
+                `<div>
+                     Click for Bihar information
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f38c233ec1d5f0e9d3ade921ae69d289 = L.marker(
+                [20.2376, 84.27],
+                {}
+            ).addTo(map_be6f4a3f5ba3f9448847775b644dc356);
+        
+    
+            var icon_70e48f83e81ed70549b7a9ca2a318a74 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fas fa-house-flood-water", "iconColor": "black", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_f38c233ec1d5f0e9d3ade921ae69d289.setIcon(icon_70e48f83e81ed70549b7a9ca2a318a74);
+        
+    
+        var popup_2f26d889c543fe2224022f512939163a = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_edad80b5263932f2aa283eb012acee21 = $(`<div id="html_edad80b5263932f2aa283eb012acee21" style="width: 100.0%; height: 100.0%;"> <div style='width: 500px; height: auto; padding: 9px; border: 2px solid #333; border-radius: 10px;'>     <h2 style='color: #1e73be; background-color: #333; color: white; padding: 18px; border-radius: 5px;font-size:24px;margin-top: -2px;'>         Odisha: Floods Aug 2022     </h2>     <p style='font-size: 15px; text-align: justify;color: black;'>         The 2022 Odisha floods were caused by heavy monsoon rains that led to the overflowing of the Mahanadi river and its tributaries. The floods began in August and affected over 950,000 people in 26 districts of the state.The floods caused widespread damage to property and infrastructure. Over 126,000 hectares of crop land was damaged, 250,000 people were marooned, seven killed, over 14,000 houses were damaged and destroyed by the floods, 440 relief centers were established and ₹126 crore of public property got damaged and destroyed. Due to the crop damage, prices of affected vegetables increased noticeably and supply chains were affected.     </p>     <p style='font-size: 20px; font-weight: bold; margin-top: 20px;color: black;'>         Major Affected Areas     </p> </div>  </div>`)[0];
+                popup_2f26d889c543fe2224022f512939163a.setContent(html_edad80b5263932f2aa283eb012acee21);
+            
+        
+
+        marker_f38c233ec1d5f0e9d3ade921ae69d289.bindPopup(popup_2f26d889c543fe2224022f512939163a)
+        ;
+
+        
+    
+    
+            marker_f38c233ec1d5f0e9d3ade921ae69d289.bindTooltip(
+                `<div>
+                     Click for Odisha information
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_810974d397b5d2230ab032984fc156cb = L.marker(
+                [10.1632, 76.6413],
+                {}
+            ).addTo(map_be6f4a3f5ba3f9448847775b644dc356);
+        
+    
+            var icon_593dd217ffc52eab95e5e9eca61dd50f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fas fa-house-flood-water", "iconColor": "black", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_810974d397b5d2230ab032984fc156cb.setIcon(icon_593dd217ffc52eab95e5e9eca61dd50f);
+        
+    
+        var popup_3ec5579168a13a86302dec983cc7f401 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_f42aabb58b33970aa9d5543639531b80 = $(`<div id="html_f42aabb58b33970aa9d5543639531b80" style="width: 100.0%; height: 100.0%;"> <div style='width: 500px; height: auto; padding: 9px; border: 2px solid #333; border-radius: 10px;'>     <h2 style='color: #1e73be; background-color: #333; color: white; padding: 18px; border-radius: 5px;font-size:24px;margin-top: -2px;'>         Kerela: Floods Aug 2018     </h2>     <p style='font-size: 15px; text-align: justify;color: black;'>         The 2018 Kerala floods were the worst floods in the state in nearly a century.The floods were caused by unusually heavy monsoon rains, and resulted in the deaths of over 480 people.The flood also caused widespread damage to property and infrastructure, and displaced over a million people.The floods had a devastating impact on the state's economy, with losses estimated at over $5 billion.The floods also caused significant environmental damage, with the destruction of forests and wildlife habitat.     </p>     <p style='font-size: 20px; font-weight: bold; margin-top: 20px;color: black;'>         Major Affected Areas     </p> </div>  </div>`)[0];
+                popup_3ec5579168a13a86302dec983cc7f401.setContent(html_f42aabb58b33970aa9d5543639531b80);
+            
+        
+
+        marker_810974d397b5d2230ab032984fc156cb.bindPopup(popup_3ec5579168a13a86302dec983cc7f401)
+        ;
+
+        
+    
+    
+            marker_810974d397b5d2230ab032984fc156cb.bindTooltip(
+                `<div>
+                     Click for Kerela information
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cf81fc6d656ad43351494fb2e346e406 = L.marker(
+                [27.3516, 88.3239],
+                {}
+            ).addTo(map_be6f4a3f5ba3f9448847775b644dc356);
+        
+    
+            var icon_857c5cb59bf65aa1fc7fd6b79239f54d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fas fa-house-flood-water", "iconColor": "black", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_cf81fc6d656ad43351494fb2e346e406.setIcon(icon_857c5cb59bf65aa1fc7fd6b79239f54d);
+        
+    
+        var popup_bbb486401aca29affca45d9e2bc1e32f = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_e70f779bd40c33ec0fde3ea6815ce2f0 = $(`<div id="html_e70f779bd40c33ec0fde3ea6815ce2f0" style="width: 100.0%; height: 100.0%;"> <div style='width: 500px; height: auto; padding: 9px; border: 2px solid #333; border-radius: 10px;'>     <h2 style='color: #1e73be; background-color: #333; color: white; padding: 18px; border-radius: 5px;font-size:24px;margin-top: -2px;'>         Sikkim: Floods Oct 2023     </h2>     <p style='font-size: 15px; text-align: justify;color: black;'>         The 2023 Sikkim floods were a series of flash floods and landslides that occurred in the Indian state of Sikkim on October 4, 2023.The floods were caused by heavy rainfall, which triggered a glacial lake outburst flood (GLOF) in the Teesta River.The GLOF destroyed the Teesta III Dam and caused widespread flooding downstream.The floods affected over 50,000 people and killed at least 40 people and displaced thousands more. The floods also caused widespread damage to infrastructure, including roads, bridges, and power lines. The estimated cost of the damage is in the billions of rupees.     </p>     <p style='font-size: 20px; font-weight: bold; margin-top: 20px;color: black;'>         Major Affected Areas     </p> </div>  </div>`)[0];
+                popup_bbb486401aca29affca45d9e2bc1e32f.setContent(html_e70f779bd40c33ec0fde3ea6815ce2f0);
+            
+        
+
+        marker_cf81fc6d656ad43351494fb2e346e406.bindPopup(popup_bbb486401aca29affca45d9e2bc1e32f)
+        ;
+
+        
+    
+    
+            marker_cf81fc6d656ad43351494fb2e346e406.bindTooltip(
+                `<div>
+                     Click for Sikkim information
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>

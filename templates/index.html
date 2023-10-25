@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>{{title}}</title>  
+        <style>
+            .main{
+                width: 1000px;
+                background-color: red;
+                color:white;
+                padding:20px;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">{{bdata}}</div>
+        <div class="main">{{clist}}</div>
+        {%  for n in clist  %}
+        <div>{{forloop.counter}} {{n}}</div>
+        {% endfor %}
+    </body>
+</html>
