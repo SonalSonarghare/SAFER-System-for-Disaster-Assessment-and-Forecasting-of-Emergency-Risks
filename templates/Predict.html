@@ -121,3 +121,65 @@
     <script src="/static/js/app.js" defer></script>
   </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flood Check</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            width: 400px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label {
+            font-size: 16px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="latitude">Latitude:</label>
+        <input type="text" name="latitude" id="latitude">
+        <br>
+        <label for="longitude">Longitude:</label>
+        <input type="text" name="longitude" id="longitude">
+        <br>
+        <input type="submit" value="floodpredict">
+    </form>
+    
+</body>
+</html>

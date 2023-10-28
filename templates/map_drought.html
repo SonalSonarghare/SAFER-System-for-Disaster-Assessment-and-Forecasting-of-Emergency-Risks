@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+     
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>section {
+        background-color: white; /* Set the background color to white */
+        width: 100%;
+        height: 110%; /* Adjust the height as needed */
+        overflow: hidden; /* Ensure the map doesn't overflow the section */
+    }
+    .map-title {
+        font-size: 30px;
+        font-weight: bold;
+        color: black;
+        margin-top: 105px;
+        text-align: center; /* Horizontally center text */
+        display: flex;
+        justify-content: center; /* Horizontally center child elements */
+        align-items: center; /* Vertically center child elements */
+    }
+    .map-title span {
+        margin-right:10px;
+        color: red;
+    }
+    </style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;width:50%;height:50%;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            
+    
+</head>
+<body>
+<header class="header">
+            <a href="#" class="logo">
+                <img src="/static/images/logo.png" alt="">
+            </a>
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#services">Support & Services</a>
+                <a href="#About">About</a>
+                <a href="#Contact">Contact</a>
+            </nav>
+            <nav class="navbar1">
+                <a href="#overview">Overview</a>
+                <div class="menu-bar">
+                    <ul>
+                        <li><a href="#">Disasters  <i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown_menu">
+                                <ul>
+                                    <li><a href="/drought">Drought</a></li>
+                                    <li><a href="/flood">Floods</a></li>
+                                    <li><a href="/cyclone">Cyclones</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#resources">Resources</a>
+            </nav>
+            <div class="icon">
+                <div class="fas fa-search" id="search-btn"></div>
+                <div class="fas fa-user" id="user-icon"></div>
+            </div>
+</header>
+<section>
+    <h1 class="map-title"><span>INDIA  </span>   DROUGHT ASSESSMENT MAP</h1>
+    <div style="width: 70%; height: 25%; margin:-100px auto;"></div>
+       <center><iframe src="/static/Map_main2.html" height="580" width="1000"frameborder="0"></iframe></center>
+       <i class="fas fa-location-pin" style="color:#CD50B5; font-size: 2em;margin-left: 500px;"></i><span style="font-style: italic;"> Pink markers indicate Drought 2016.</span>
+       <i class="fas fa-location-pin" style="color:#72AF26; font-size: 2em; margin-left: 300px;"></i><span style="font-style: italic;"> Green markers indicate Drought 2018.</span>
+       <br>
+       <i class="fas fa-location-pin" style="color:#F59630; font-size: 2em; position: relative; top: 30px; margin-left: 500px;"></i><span style="position: relative; top: 30px; font-style: italic;"> Orange markers indicate Drought 2019.</span>
+       <i class="fas fa-location-pin" style="color:#D33D2A; font-size: 2em; position: relative; top: 30px; margin-left: 280px;"></i><span style="position: relative; top: 30px; font-style: italic;"> Red markers indicate Drought 2023.</span>
+       
+    </div>
+
+    </div> 
+</section>
+</body>
+</html>

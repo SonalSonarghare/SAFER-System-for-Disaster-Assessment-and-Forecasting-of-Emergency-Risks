@@ -1,0 +1,28 @@
+<!-- templates/windy_forecast.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Windy Map Forecast</title>
+</head>
+<body>
+    <h1>Windy Map Forecast</h1>
+    <div id="windy-forecast"></div>
+    <script>
+        // Initialize the Windy map with the forecast data
+        var options = {
+            key: '{{ windy_data.key }}',
+            lat: {{ windy_data.lat }},
+            lon: {{ windy_data.lon }},
+            zoom: {{ windy_data.zoom }}
+        };
+        windyInit(options, function (windyAPI) {
+            // Your Windy API code here
+            // For example:
+            windyAPI.store.set('overlay', 'wind');
+        });
+    </script>
+    <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+
+{% include 'windy_forecast.html' %}
+</body>
+</html>

@@ -20,13 +20,16 @@ from disaster import views
 from django.urls import path
 from . import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.homePage),
     path('home/',views.Home),
     path('flood/',views.flood),
     path('cyclone/',views.cyclone),
+    path('drought/',views.drought),
     path('FloodAssessment/',views.FloodAssessment),  
+    path('map_drought/', views.map_drought, name='map_drought'),
     path('map/', views.map, name='map_view'),
     path('UP/', views.UP),
     path('Gorakhpur/',views.Gorakhpur,name='Gorakhpur'),
@@ -45,8 +48,20 @@ urlpatterns = [
     path('Katihar/',views.Katihar,name='Katihar'),
     path('Kendrapara/',views.Kendrapara,name='Kendrapara'),
     path('Puri/',views.Puri,name='Puri'),
+    path('beed/',views.beed,name='beed'),
+    path('jalna/',views.jalna,name='jalna'),
+    path('belgaum/',views.belgaum,name='belgaum'),
+    path('bagalkot/',views.bagalkot,name='bagalkot'),
+    path('Dharam/',views.Dharam,name='Dharam'),
+    path('Tiru/',views.Tiru,name='Tiru'),
+    path('Tika/',views.Tika,name='Tika'),
     path('Predict/',views.Predict,name='Predict'),
+    path('floodpredict/',views.floodpredict,name='floodpredict'),
+    path('droughtpredict/',views.droughtpredict,name='droughtpredict'),
     
+    path('Bharuch/',views.Bharuch,name='Bharuch'),
+    path('aurang/',views.aurang,name='aurang'),
+  
     
 
 

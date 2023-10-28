@@ -1,21 +1,43 @@
-<html>
-    <head>
-        <title>{{title}}</title>  
-        <style>
-            .main{
-                width: 1000px;
-                background-color: red;
-                color:white;
-                padding:20px;
-                font-size: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="main">{{bdata}}</div>
-        <div class="main">{{clist}}</div>
-        {%  for n in clist  %}
-        <div>{{forloop.counter}} {{n}}</div>
-        {% endfor %}
-    </body>
-</html>
+def floodpredict(request):
+    if request.method == 'POST':
+        latitude = float(request.POST.get('latitude'))
+        longitude = float(request.POST.get('longitude'))
+
+        # Fetch river discharge data using the provided API
+        river_discharge_api_url = f'https://flood-api.open-meteo.com/v1/flood?latitude={latitude}&longitude={longitude}&daily=river_discharge&past_days=31&forecast_days=7'
+        river_discharge_response = requests.get(river_discharge_api_url)
+
+        # Fetch current and hourly rainfall data using the provided API
+        rainfall_api_url = f'https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&current=rain&hourly=rain&timezone=auto&past_days=31'
+        rainfall_response = requests.get(rainfall_api_url)
+
+        # Check if the requests were successful
+        if river_discharge_response.status_code == 200 and rainfall_response.status_code == 200:
+            # Extract the current river discharge and current rainfall
+            try:
+                current_river_discharge = float(river_discharge_response.json()['daily'][0]['river_discharge'])
+            except KeyError:
+                current_river_discharge = None
+            current_rainfall = float(rainfall_response.json()['current']['rain'])
+
+            # Extract hourly rainfall data for the next few hours
+            hourly_rainfall = rainfall_response.json()['hourly']['rain']
+
+            # Calculate cumulative rainfall over the past few hours
+            cumulative_rainfall = sum(hourly_rainfall)
+
+            # Define flood thresholds
+            river_discharge_threshold = 1.5  # Example threshold for river discharge
+            rainfall_threshold = 50.0  # Example threshold for cumulative rainfall (adjust as needed)
+
+            # Check if there might be a flood
+            if current_river_discharge is not None and (current_river_discharge > river_discharge_threshold or cumulative_rainfall > rainfall_threshold):
+                result = "FLOOD"
+            else:
+                result = "NO FLOOD"
+        else:
+            result = "Failed to fetch data. Status codes: River Discharge - " + str(river_discharge_response.status_code) + ", Rainfall - " + str(rainfall_response.status_code)
+
+        return HttpResponse(result)  # You can return the result as a response
+
+    return render(request, 'floodpredict.html')  # Create a template for the form

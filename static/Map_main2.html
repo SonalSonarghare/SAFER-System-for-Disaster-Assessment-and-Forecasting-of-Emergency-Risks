@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+        
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8251aa74b409bf450919c08ca465d92e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8251aa74b409bf450919c08ca465d92e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8251aa74b409bf450919c08ca465d92e = L.map(
+                "map_8251aa74b409bf450919c08ca465d92e",
+                {
+                    center: [20.5937, 78.9629],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            var tile_layer_c9a3b62f3561f9e71533abaeb3c4433c = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8251aa74b409bf450919c08ca465d92e);
+        
+    
+            var marker_ddf0aaa72aa8b9c101080d1ed12065c7 = L.marker(
+                [26.9157, 70.9083],
+                {}
+            ).addTo(map_8251aa74b409bf450919c08ca465d92e);
+        
+    
+            var icon_83035ced8e4547be94131717fcd37f74 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fas  fa-hand-holding-droplet", "iconColor": "black", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_ddf0aaa72aa8b9c101080d1ed12065c7.setIcon(icon_83035ced8e4547be94131717fcd37f74);
+        
+    
+        var popup_79ec39f7de21ffdd108c1e383cb4535a = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_22b14ff31ef1bcfaa7bd5db945b40d98 = $(`<div id="html_22b14ff31ef1bcfaa7bd5db945b40d98" style="width: 100.0%; height: 100.0%;"> <div style='width: 500px; height: auto; padding: 9px; border: 2px solid #333; border-radius: 10px;'>     <h2 style='color: #1e73be; background-color: #333; color: white; padding: 18px; border-radius: 5px;font-size:27px;margin-top: -2px;'>         Rajasthan: Drought Sept 2021     </h2>    
+                     <p style='font-size: 15px; text-align: justify;color: black;'>In September 2021, Rajasthan experienced its worst drought in over a decade. The state received 30% less rainfall than normal, and many areas received no rain at all. This led to widespread crop failures and water shortages.The drought affected over 10 million people in Rajasthan, and displaced over 2 million people. The state government declared a drought emergency in 26 of the state's 33 districts.   </p>    
+                     <p style='font-size: 20px; font-weight: bold; margin-top: 20px;color: black;'>Major Affected Areas     </p> 
+                     <a href="templates/Floods-Maps/Jaisalmer.html" target="_blank" class="btn" style="background-color: #0606FF; color: white; padding: 10px 20px; font-size:20px; font-weight: bold; border-radius: 5px; margin-top: -20px;">Jaisalmer</a></div>  </div>`)[0];
+                popup_79ec39f7de21ffdd108c1e383cb4535a.setContent(html_22b14ff31ef1bcfaa7bd5db945b40d98);
+                
+        
+
+        marker_ddf0aaa72aa8b9c101080d1ed12065c7.bindPopup(popup_79ec39f7de21ffdd108c1e383cb4535a)
+        ;
+
+        
+    
+    
+            marker_ddf0aaa72aa8b9c101080d1ed12065c7.bindTooltip(
+                `<div>
+                     Click for Rajasthan information
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4d4cd4e24ebfc5fe60ee2f33db4a2935 = L.marker(
+                [19.8762, 75.3433],
+                {}
+            ).addTo(map_8251aa74b409bf450919c08ca465d92e);
+        
+    
+            var icon_30e4f91c90aad7ec9be940c725ef73a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fas fa-hand-holding-droplet", "iconColor": "black", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_4d4cd4e24ebfc5fe60ee2f33db4a2935.setIcon(icon_30e4f91c90aad7ec9be940c725ef73a5);
+        
+    
+        var popup_39277c9c1dabb4b3a263564f720ba433 = L.popup({"maxWidth": 500});
+
+        
+            
+        var html_5e4e8c38f49c6c9c5a725309e09c8d38 = $(
+            `<div id="html_5e4e8c38f49c6c9c5a725309e09c8d38" style="width: 100.0%; height: 100.0%;">
+              <div style='width: 500px; height: auto; padding: 9px; border: 2px solid #333; border-radius: 10px;'>
+                <h2 style='color: #1e73be; background-color: #333; color: white; padding: 18px; border-radius: 5px; font-size:24px; margin-top: -2px;'>
+                  Maharashtra:Aug 2023 & MAY 2019 Drought 
+                </h2>
+                <p style='font-size: 15px; text-align: justify; color: black;'>
+                  Maharashtra is facing a drought situation in August 2023 and MAY 2019. The state has received only 28% of its average rainfall in the three months of June, July, and August. This has caused widespread crop damage in many districts of the state.The rainfall in Maharashtra in August was 58% below average. This means that many districts in Maharashtra have received 20% to 59% less rainfall than average. This has led to a drought situation in some districts of Marathwada.The drought has had a devastating impact on farmers in Maharashtra. The loss of crops in the Kharif season has caused heavy losses to farmers. In addition, the drought has created a drinking water shortage.
+                </p>
+                <p style='font-size: 20px; font-weight: bold; margin-top: 20px; color: black;'>
+                    Major Affected Areas 
+                </p>
+                 <a href="templates/Floods-Maps/aurang.html" target="_blank" class="btn" style="background-color: #0606FF; color: white; padding: 10px 20px; font-size:20px; font-weight: bold; border-radius: 5px; margin-top: -20px;">Aurangabad</a>
+                 <a href="templates/Floods-Maps/beed.html" target="_blank" class="btn" style="background-color: red; color: white; padding: 10px 20px; font-size:20px; font-weight: bold; border-radius: 5px; margin-top: -20px;margin-left:20px">Beed</a>
+                 <a href="templates/Floods-Maps/Jalna.html" target="_blank" class="btn" style="background-color: Green; color: white; padding: 10px 20px; font-size:20px; font-weight: bold; border-radius: 5px;margin-left:30px; margin-top: -20px;">Jalna</a>
+              </div>
+            </div>`
+          )[0];
+          
+          popup_39277c9c1dabb4b3a263564f720ba433.setContent(html_5e4e8c38f49c6c9c5a725309e09c8d38);
+          
+        
+
+        marker_4d4cd4e24ebfc5fe60ee2f33db4a2935.bindPopup(popup_39277c9c1dabb4b3a263564f720ba433)
+        ;
+
+        
+    
+    
+            marker_4d4cd4e24ebfc5fe60ee2f33db4a2935.bindTooltip(
+                `<div>
+                     Click for Maharashtra information
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7ac9ea01eb49270b70b266a4681373be = L.marker(
+                [21.7051, 72.9959],
+                {}
+            ).addTo(map_8251aa74b409bf450919c08ca465d92e);
+        
+            https://fontawesome.com/icons/hand-holding-droplet?f=classic&s=solid
+            var icon_ab9843b4707d808a1cd19c313689ab37 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fas fa-hand-holding-droplet", "iconColor": "black", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7ac9ea01eb49270b70b266a4681373be.setIcon(icon_ab9843b4707d808a1cd19c313689ab37);
+        
+    
+        var popup_6ecd5c58b66412389d8dc6c63ffc54f9 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_2b0a6a202b7e582514502de5bea5fc79 = $(`<div id="html_2b0a6a202b7e582514502de5bea5fc79" style="width: 100.0%; height: 100.0%;"> <div style='width: 500px; height: auto; padding: 9px; border: 2px solid #333; border-radius: 10px;'>     <h2 style='color: #1e73be; background-color: #333; color: white; padding: 18px; border-radius: 5px;font-size:24px;margin-top: -2px;'>         Gujurat: Aug 2023 Drought    </h2>     
+                    <p style='font-size: 15px; text-align: justify;color: black;'> 
+                        Gujarat is also facing a drought situation in August 2023. The state has received only 59% of its average rainfall in the three months of June, July, and August. This has caused widespread crop damage in many districts of the state.The rainfall in Gujarat in August was 65% below average. This means that many districts in Gujarat have received 35% to 59% less rainfall than average. This has led to a drought situation in some districts of Saurashtra and Kutch.The drought has had a devastating impact on farmers in Gujarat. The loss of crops in the Kharif season has caused heavy losses to farmers. In addition, the drought has created a drinking water shortage.    </p>     
+                    <p style='font-size: 20px; font-weight: bold; margin-top: 20px;color: black;'>         Major Affected Areas     </p> 
+                    <a href="templates/Floods-Maps/Bharuch.html" target="_blank" class="btn" style="background-color: #0606FF; color: white; padding: 10px 20px; font-size:20px; font-weight: bold; border-radius: 5px; margin-top: -20px;">Bharuch</a></div></div>`)[0];
+                popup_6ecd5c58b66412389d8dc6c63ffc54f9.setContent(html_2b0a6a202b7e582514502de5bea5fc79);
+            
+        
+
+        marker_7ac9ea01eb49270b70b266a4681373be.bindPopup(popup_6ecd5c58b66412389d8dc6c63ffc54f9)
+        ;
+
+        
+    
+    
+            marker_7ac9ea01eb49270b70b266a4681373be.bindTooltip(
+                `<div>
+                     Click for Gujurat information
+                 </div>`,
+                {"sticky": true}
+            );        
+
+
+            var marker_ce2262ea9e4d22cbf5e2d53db148f0d3 = L.marker(
+                [16.0729, 76.0599],
+                {}
+            ).addTo(map_8251aa74b409bf450919c08ca465d92e);
+        
+    
+            var icon_e05f6eeb07503a9eca68f06ef1b3a7ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fas fa-hand-holding-droplet", "iconColor": "black", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_ce2262ea9e4d22cbf5e2d53db148f0d3.setIcon(icon_e05f6eeb07503a9eca68f06ef1b3a7ca);
+        
+    
+        var popup_efb3d761a488743753a413ec0aa66b74 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_eb9d785d1373144f932d505160dda25e = $(`<div id="html_eb9d785d1373144f932d505160dda25e" style="width: 100.0%; height: 100.0%;"> <div style='width: 500px; height: auto; padding: 9px; border: 2px solid #333; border-radius: 10px;'>     <h2 style='color: #1e73be; background-color: #333; color: white; padding: 18px; border-radius: 5px;font-size:24px;margin-top: -2px;'>         North Karnataka: April-May 2016     </h2>     
+                    <p style='font-size: 15px; text-align: justify;color: black;'>         
+                        The 2016 April-May drought in North Karnataka was one of the worst droughts in the region's history. It affected over 15 million people and caused widespread crop losses. The drought was caused by a combination of factors, including the failure of the monsoon rains, rising temperatures, and climate change.The drought began in April 2016 and continued through May. During this time, many parts of North Karnataka received less than half of their normal rainfall. The lack of rain caused reservoirs to dry up and groundwater levels to decline. This led to a shortage of water for drinking, irrigation, and other purposes.
+                        The drought had a devastating impact on agriculture in North Karnataka. Over 50% of the crops in the region were lost. This caused widespread food insecurity and economic hardship for farmers and their families.</p>     
+                    <p style='font-size: 20px; font-weight: bold; margin-top: 20px;color: black;'>         Major Affected Areas     </p>  
+                    <a href="templates/Floods-Maps/bagalkot.html" target="_blank" class="btn" style="background-color: red; color: white; padding: 10px 20px; font-size:20px; font-weight: bold; border-radius: 5px; margin-top: -20px;">Bagalkot</a>
+                    <a href="templates/Floods-Maps/belgaum.html" target="_blank" class="btn" style="background-color: #0606FF; color: white; padding: 10px 20px; font-size:20px; font-weight: bold; border-radius: 5px;margin-left:30px; margin-top: -20px;">Belgaum</a></div></div>`)[0];
+                      
+                popup_efb3d761a488743753a413ec0aa66b74.setContent(html_eb9d785d1373144f932d505160dda25e);
+                
+        
+
+        marker_ce2262ea9e4d22cbf5e2d53db148f0d3.bindPopup(popup_efb3d761a488743753a413ec0aa66b74)
+        ;
+
+        
+    
+    
+            marker_ce2262ea9e4d22cbf5e2d53db148f0d3.bindTooltip(
+                `<div>
+                     Click for North Karnataka information
+                 </div>`,
+                {"sticky": true}
+            );
+
+            
+            var marker_9d48bebb9587466071a4e79be166fdc7 = L.marker(
+                [11.1271, 78.6569],
+                {}
+            ).addTo(map_8251aa74b409bf450919c08ca465d92e);
+        
+    
+            var icon_b159808e8b1bd5149c841b0bb720104d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fas fa-hand-holding-droplet", "iconColor": "black", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_9d48bebb9587466071a4e79be166fdc7.setIcon(icon_b159808e8b1bd5149c841b0bb720104d);
+        
+    
+        var popup_f93d6f60f5a536b6308763e09b5ab8f8 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_b74e08e25fc2f5210db9f19470efb1dd = $(`<div id="html_b74e08e25fc2f5210db9f19470efb1dd" style="width: 100.0%; height: 100.0%;"> <div style='width: 500px; height: auto; padding: 9px; border: 2px solid #333; border-radius: 10px;'>     <h2 style='color: #1e73be; background-color: #333; color: white; padding: 18px; border-radius: 5px;font-size:24px;margin-top: -2px;'>         Tamil Nadu: March-May 2019     </h2>     
+                    <p style='font-size: 15px; text-align: justify;color: black;'> The 2019 Tamil Nadu drought was one of the worst droughts in the state's recent history. It began in March 2019 and continued through May. It affected over 60% of the state's districts and caused widespread crop losses.The drought was caused by a combination of factors, including:<br>The failure of the northeast monsoon rains in 2018: The monsoon rains are the main source of water for Tamil Nadu. The failure of the monsoon in 2018 led to a severe water shortage in the state.</p>     
+                    <p style='font-size: 20px; font-weight: bold; margin-top: 20px;color: black;'>         Major Affected Areas     </p> 
+                    <a href="templates/Floods-Maps/Tiru.html" target="_blank" class="btn" style="background-color: #0606FF; color: white; padding: 10px 20px; font-size:20px; font-weight: bold; border-radius: 5px; margin-top: -20px;">Tiruvannamalai</a>
+                    <a href="templates/Floods-Maps/Dharam.html" target="_blank" class="btn" style="background-color: red; color: white; padding: 10px 20px; font-size:20px; font-weight: bold; border-radius: 5px;margin-left:30px; margin-top: -20px;">Dharmapuri</a></div></div>`)[0];
+                popup_f93d6f60f5a536b6308763e09b5ab8f8.setContent(html_b74e08e25fc2f5210db9f19470efb1dd);
+            
+        
+
+        marker_9d48bebb9587466071a4e79be166fdc7.bindPopup(popup_f93d6f60f5a536b6308763e09b5ab8f8)
+        ;
+
+        
+    
+    
+            marker_9d48bebb9587466071a4e79be166fdc7.bindTooltip(
+                `<div>
+                     Click for Tamil Nadu information
+                 </div>`,
+                {"sticky": true}
+            );
+
+
+            var marker_7255a091807486d240b0f6b0483199b3 = L.marker(
+                [22.9734, 78.6569],
+                {}
+            ).addTo(map_8251aa74b409bf450919c08ca465d92e);
+        
+    
+            var icon_35642ff195e63f0de1462bdd2da48d47 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fas fa-hand-holding-droplet", "iconColor": "black", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7255a091807486d240b0f6b0483199b3.setIcon(icon_35642ff195e63f0de1462bdd2da48d47);
+        
+    
+        var popup_dcdcf7ab41660287db6ca891089d759c = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_8e208c30bfb647a4409ef53a46ec8167 = $(`<div id="html_8e208c30bfb647a4409ef53a46ec8167" style="width: 100.0%; height: 100.0%;"> <div style='width: 500px; height: auto; padding: 9px; border: 2px solid #333; border-radius: 10px;'>     <h2 style='color: #1e73be; background-color: #333; color: white; padding: 18px; border-radius: 5px;font-size:24px;margin-top: -2px;'>Madhya Pradhesh: May 2018 Drought </h2>     
+                    <p style='font-size: 15px; text-align: justify;color: black;'>       The 2018 May drought in Madhya Pradesh was one of the worst droughts in the state's recent history. It affected over 20 districts and caused widespread crop losses. The drought was caused by a combination of factors, including the failure of the pre-monsoon rains in April 2018, rising temperatures, climate change, and poor water management.The drought had a devastating impact on agriculture in Madhya Pradesh. Over 50% of the crops in the state were lost, including crops such as wheat, soybeans, and pulses. This caused widespread food insecurity and economic hardship for farmers and their families.</p>     
+                    <p style='font-size: 20px; font-weight: bold; margin-top: 20px;color: black;'>         Major Affected Areas     </p> 
+                    <a href="templates/Floods-Maps/Tika.html" target="_blank" class="btn" style="background-color: #0606FF; color: white; padding: 10px 20px; font-size:20px; font-weight: bold; border-radius: 5px; margin-top: -20px;">Tikamgarh</a></div></div>`)[0];
+                popup_dcdcf7ab41660287db6ca891089d759c.setContent(html_8e208c30bfb647a4409ef53a46ec8167);
+            
+        
+
+        marker_7255a091807486d240b0f6b0483199b3.bindPopup(popup_dcdcf7ab41660287db6ca891089d759c)
+        ;
+
+        
+    
+    
+            marker_7255a091807486d240b0f6b0483199b3.bindTooltip(
+                `<div>
+                     Click for Madhya Pradesh information
+                 </div>`,
+                {"sticky": true}
+            );
+        
+        
+      
+                // ... all of the other code in the script tag ...
+            
+                // Open a new page when the button is clicked.
+                $('.btn').on('click', function() {
+                    window.open('templates/Floods-Maps/Gorakhpur.html', '_blank');
+                });
+                
+</script>
+</html>
