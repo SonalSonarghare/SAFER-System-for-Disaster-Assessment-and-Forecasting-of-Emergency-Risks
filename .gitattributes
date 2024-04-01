@@ -1,5 +1,5 @@
 static/*.html linguist-detectable=false
-static/css/style.css linguist-detectable=false
+static/css/main.css linguist-detectable=false
 templates/Floods-Maps/* linguist-detectable=false
 templates/response1.html linguist-detectable=false
 templates/response.html linguist-detectable=false
