@@ -1,2 +1,9 @@
-*.html linguist-detectable=false  
-*.css linguist-detectable=false
+static/*.html linguist-detectable=false
+static/css/style.css linguist-detectable=false
+templates/Floods-Maps/* linguist-detectable=false
+templates/response1.html linguist-detectable=false
+templates/response.html linguist-detectable=false
+templates/my_map.html linguist-detectable=false
+templates/map_drought.html linguist-detectable=false
+templates/map.html linguist-detectable=false
+
